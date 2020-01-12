@@ -1,0 +1,44 @@
+   git 与github 入门
+
+   命令：
+   1.git --verison      查看版本
+   2.git config --global user.name"your name"
+     git config --global user.email"your email"   初次运行时进行的配置
+   3.git config --global --list  检查配置
+   4.git clone
+     cd
+     touch 文件名加后缀       /创建新文件/
+     git add 文件名加后缀
+     git commit -m"说明"
+     git push      
+
+     /将远程仓库克隆到本地，用cd进入到克隆到本地的仓库，用touch创建文件
+     可对其进行修改，或者是创建新文件，之后用git add 文件名加后缀  将
+     文件加入暂存区中，之后用git commit -m"说明"  将文件移入版本区，之
+     后用 git push，将文件上传到github/
+   5.git mv 旧的文件加后缀 旧的文件加新的后缀
+     git status
+     git commit -m"说明"
+     git log          /查看提交历史/
+     
+     /一个对文件进行重命名的操作，第一步用于更改文件后缀（在工作区中）,
+     同时将文件加入到暂存区中（省去了git add操作），最后进行git commit
+      -m"说明"将文件放到版本去，并查看提交记录（git commit -m"说明" 操作）
+  
+     (
+       以上为简易做法，常规做法如下：
+      1.mv readme.md readme.txt
+        git status  /对状态进行查看/
+      2.git add readme.txt
+      3.git rm readme.md
+        git status  /查看工作区是否还有没在暂存区的文件/
+      4.git commit -m"说明"
+        git log     /查看提交记录/
+                          )
+   6.git rm 文件名加后缀 
+
+     /以上为删除文件操作/
+   7.git reset --hard 版本号
+     git log  
+
+     /彻底退回某个版本/
