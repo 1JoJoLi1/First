@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <title>
+              子元素选择器
+
+        </title>
+        <style>
+            .box1>h2{
+                    color:red;
+            }
+            .box2>h2{
+                color:aqua;
+            }
+        </style>
+        <!--在只想影响一个子元素时，而不想改变其他子元素-->
+    </head>
+    <body>
+        <h2> i  am    hitman</h2>
+
+        <div class="box1">
+            <h2> i  am hitman</h2>
+            <div class="box2">
+                <h2> iamhitman</h2>
+            </div>
+        </div>
+    </body>
+</html>
