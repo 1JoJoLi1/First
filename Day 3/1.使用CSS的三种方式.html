@@ -6,24 +6,24 @@
 
         <title></title>
 
-        <!--2.内部样式，-->
+        <!--2.内部样式，在head中用style标签-->
         <style>
                .p2{
                    color:aqua
                }
         </style>
         
-        <!--3.外部样式：通过head标签内的link标签-->
+        <!--3.外部样式：通过head标签内的link标签的href属性，链接到外部的css文件-->
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <!--1.内联样式：通过标签style属性,直接用style标签属性-->
+        <!--1.内联样式：通过标签style属性-->
         <p style="color:red">    test one</p>
         
-        <!--2.内部样式,还要再写在该页内的head的style中-->
+        <!--2.内部样式,还要再写在该页内的head的style-->
         <p class="p2"> test 2</p>
 
-        <!--3.外部标签  用class选择器  还要在外部新创建个css文件-->
+        <!--3.外部标签，还要在外部新创建个css文件-->
         <p class="p3"> test three</p>
     </body>
 </html>
