@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+        <meta charset:"UTF-8">
+
+        <title>伪元素选择器</title>
+        <style>
+            h2::before,h2::after{
+                content:url(1.png);
+            }
+            p.p1::first-line,p.p2::first-letter,h2::first-letter{
+                font-size:55px;
+                color:blue;
+            }
+            /*p.p2::first-letter{
+                color:chartreuse;
+            }*/
+            h2::first-letter{
+                color:pink;
+                font-size:50px;
+            }
+           
+        </style>
+    </head>
+
+    <body>
+        <p class="p1">啊大大大大大大大大大大大大大大大大大大啊大大大大大大大大阿达哒哒哒啊大大阿达大的
+        </p>
+        <p class="p2">   ololololololololololol </p>
+        <h2> 伪zxczxczc</h2>
+    </body>
+</html> 

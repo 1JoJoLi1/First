@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <title> 伪类选择器 </title>
+        <style>
+            a:link{color:black;}     
+            a:visited{color:blue;}
+            a:hover{color:chartreuse;}
+            a:active{color:aliceblue;}
+            
+            p:first-child{
+                color:red;
+            }/* 找出作为某元素的第一个子元素且为p，对其进行操作*/
+            p:first-child em{
+                color:aliceblue;
+            }/* 找出作为p的子元素且第一个为em，对其进行操作*/
+            li:first-child{
+                color:chocolate;
+            }/*  找出作为某元素的子元素且第一个为li，对其进行操作*/
+        </style> 
+    </head>
+
+    <body>
+
+        <!--第二种，-->
+        <div>
+        <li>Intert Key</li>
+        <li>Turn key <strong>clockwise</strong></li>
+        <li>Push accelerator</li>
+        <p>  i <em>have</em> <em> big </em> </p>
+        <p>  o <em>ehhh</em> a moment </p>
+        
+
+        </div>
+
+        <!--伪类选择器，第一种-->
+        <a  href="https://github.com/jayjun0805/mina.git" target="blank"> dont stop  </a>
+        <a  href="https://github.com/jayjun0805/mina.git" target="blank"> you will become *******</a>
+    
+        
+        
+    </body>
+</html>
