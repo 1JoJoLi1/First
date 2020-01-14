@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>
+           相对定位
+        </title>
+       <!--相对定位会保留原来的位置-->
+       <!-- <link rel="stylesheet" href="./style.css">-->
+        <style>
+               .box1, .box2, .box3,.box4{
+                width: 100px;
+                height: 100px;
+                color: white;
+            }
+
+            .box1{
+                background-color: red;
+            }
+
+            .box2{
+                background-color: green;
+                position: relative; /* 相对定位 */
+         
+            }
+
+            .box3{
+                background-color: blue;
+                position: relative;  /* 相对定位 */
+                bottom:100px;
+               
+            }
+            .box4{
+                background-color:pink;
+            }
+        </style>
+       
+        
+    </head>
+    <body>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        
+    </body>
+
+</html>
+<!--在本例子中，将box3向上移动到box2，会出现box3覆盖box2的现象，并且box3的文字会跟上背景图片；
+    当在后面加个box4，box4不会站据box3原本的位置-->

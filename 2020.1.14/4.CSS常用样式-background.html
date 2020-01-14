@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>
+            background
+        </title>
+        
+        <style>
+             body{/*分开写*/
+                 height:9000px;
+                 background-color:cadetblue;
+                 background-image:url(./1.png); /* 给背景加入图片*/
+                 background-repeat:no-repeat;   /* 设置为不可覆盖*/
+                 background-position:center right;/*  也可用 具体的坐标   ，x与y*/
+                 background-attachment:scroll;  /* 设置为当滚动滑轮时，图片不固定*/
+             }
+             p{/*合起来写*/
+                 height:1000px;
+                 background:red url(./1.png) no-repeat center right fixed;
+             }
+        </style>
+            
+    </head>
+    <body>
+       <p>   dwwdasdg</p>
+       <div>
+           <p>
+               wdnmd
+           </p>
+       </div>
+        
+        
+    </body>
+
+</html>

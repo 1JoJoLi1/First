@@ -8,13 +8,15 @@
             内边距
         </title>
         <style>
-             p{
-                width:50px;
+             div{
+                 text-align:center;  /*文本样式中的对齐属性*/
+                 line-height:30px;  /* 文本样式中的行高属性*/
+                width:200px;    
                 height:50px;
                 background-color:red;
                 border: 10px solid green;
                 /* 内边距*/
-                padding:10px;
+                padding:10px;    /*设置内边距（上下左右）为10px*/
              }
 
              h2{
@@ -24,6 +26,7 @@
                  padding:10px 20px 30px;
              }/* 上10，下30，左右20*/
              h2{
+                line-height:50px;
                  padding:10px 20px 30px 40px;
              }/* 上10，下30，左40，👉20*/
          
@@ -31,7 +34,7 @@
 
     </head>
     <body>
-        <p>  这是一个测试</p>
+        <div>  这是一个测试</p>
         <h2> 这是个啥</h2>
 
     </body>

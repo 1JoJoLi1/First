@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            body{
+                color: purple;
+            }
+
+            .box1,.box5, .box6{
+                width: 100px;
+                height: 100px;
+            }
+
+            .box1{
+                background-color: red;
+            }
+
+            .box2{
+                background-color: green;
+                width: 400px;
+                height: 400px;
+                 position: relative;  
+                 top:30px;
+                 left:30px;
+            }
+
+            .box3{
+                background-color: blue;
+                width: 300px;
+                height: 300px;
+                
+                
+            }
+
+            .box4{
+                background-color: yellow;
+                width: 200px;
+                height: 200px;
+                position: absolute; /* 绝对定位 */
+                top: 0;
+                left: 0;
+            }
+
+            .box5{  /*依照body定位*/
+                background-color: pink;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .box6{
+                background-color: saddlebrown;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <!--box1,box5,box6单独；
+            box2>box3>box4-->
+
+        <div class="box1">box1</div>
+        
+
+        <div class="box2">
+            box2
+            <div class="box3">
+                box3
+                <div class="box4">box4</div>
+            </div>
+        </div>
+        
+
+        <div class="box5">box5</div>
+        
+
+        <div class="box6">box6</div>
+        
+    </body>
+
+</html>
+<!--在绝对定位是依照几经定位的父类进行定位，且位置会改变，如果找不到，则依照body标签-->
+<!--一般在相对定位中套绝对定位------》  我认为：在网页中为了定位图片，不用在意他的真实位置，因为即使一个相对定位后的图片会影响到下一个
+    图片，同理也可以对下一个图片进行相对定位，而且在相对定位中套用绝对定位，可以轻松的套图    -->

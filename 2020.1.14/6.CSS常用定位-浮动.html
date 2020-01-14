@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>
+           浮动与清除浮动
+        </title>
+
+        <link rel="stylesheet" href="./style.css">
+        <style>
+             *{
+                padding: 0;
+                margin: 0;
+            }
+            .p1,.p2{
+                width:50%;
+                height:90px;
+                float:left;
+            }     
+            .p1{
+                background-color:red; 
+            }
+            .p2{
+                background-color:blue;
+            }
+            .p3{
+                width:50%;
+                height:90px;
+                background-color:pink;
+            }
+            .p3{
+                clear:both;
+            }
+           /* .p4{
+                width:50%;
+                height:90px;
+                background-color:green;
+            }*/
+        </style>
+       
+        
+    </head>
+    <body>
+       <p class="p1">  1ppppppp</p>
+       <p class="p2">  2pppppppppp</p>
+       <p class="p3">  3pppppppppp</p>
+       <p class="p4">  4pppppppppp</p>
+        
+    </body>
+
+</html>
+<!-- 在本例子，当p1，p2浮动，而p3不浮动，会出现p3的背景颜色向上移动但是标签的内容不移动，而且再像后面跟个p4，会发现p4与p3重合；
+     如果再p3中加入clear，则p3不会因为p2，p1的float而影响位置，并且在这时往p3后面加个p4，   p3，p4不会重合-->
