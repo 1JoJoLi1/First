@@ -51,3 +51,6 @@
 
 
      https://study.163.com/course/introduction/1003108022.htm
+
+
+     animate.css 动画库 https://daneden.github.io/animate.css/

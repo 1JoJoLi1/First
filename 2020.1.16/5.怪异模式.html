@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        div{
+            /*margin:50px;对元素的大小没有影响*/
+
+
+           border: red solid 50px;
+            padding:100px;
+            width:100px;
+            height:100px;
+            background:blue;
+            border-radius:50%;
+        }
+        body div:nth-of-type(2){
+            box-sizing:content-box;
+        }
+        body div:nth-of-type(1){
+            box-sizing:border-box;/*怪异模式，当增加margin,padding,border属性时，元素大小不会改变?????*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div"> </div>
+    <div class="div"> </div>
+</body>
+</html>

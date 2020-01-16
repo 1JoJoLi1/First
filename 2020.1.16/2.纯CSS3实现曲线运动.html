@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:green;
+            border-radius:50%;
+            position:absolute;
+            left:50px;
+            bottom:50px;
+        }
+        .ball-right-top{
+            animation:top 2s linear 1s infinite alternate,right 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) 1s infinite  alternate;
+            animation-fill-mode:forwards;
+        }
+        @keyframes top{
+            0%{
+            bottom:50px;
+            }
+            100%{
+            bottom:500px;
+            }
+        }
+        @keyframes right{
+            0%{
+                left:50px;
+            }
+            100%{
+                left:500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball-right-top"></div>
+</body>
+</html>

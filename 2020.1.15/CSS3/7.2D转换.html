@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <tile>2d 转换
+        </tile>
+        <style>
+          .p1,.p2,.p3,.p4,.p5,.p6{
+            width:400px;
+            height:400px;
+            margin:200px;
+            background-color:red;
+          }
+          
+          .p2{/*translateX   translateY*/
+            transform:translate(900px,300px);
+          }
+          .p3{/*scaleX scaleY*/
+            transform:scale(2,1);
+          }
+          .p4{
+            transform:rotate(90deg);
+          }
+          .p5{/* skewX skewY*/
+              transform:skew(40deg,0deg);
+          }
+        </style>
+    </head>
+            
+    <body>
+        <p class="p1"> 不做任何操作</p>
+        <p class="p2"> 沿着x或y轴进行平移</p>
+        <p class="p3"> 身长</p>
+        <p class="p4"> 平面旋转</p>
+        <p class="p5"> 沿着x或y轴旋转</p>
+        <p class="p6"> p6</p>
+
+    </body>
+</html>

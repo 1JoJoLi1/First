@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;/*怪异模式*/
+        }
+        body{
+            height:100vh;/*flex布局 需设置*/
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+        }
+        .dice-1,.dice-2,.dice-3,.dice-4,.dice-5,.dice-6{
+            display:flex;/* 设置flex布局，但没有具体属性定义*/
+            padding:10px;
+            width:70px;
+            height:70px;
+            border-radius:10%;
+            background:rgb(219, 213, 213);
+            box-shadow:0  -5px 1px rgb(182, 177, 177) inset,
+                       5px 0  1px rgb(202, 194, 194) inset,
+                       0  5px 1px rgb(202,194,194) inset, 
+                       -5px 0 1px rgb(202, 194, 194) inset;
+        }/*inset属性，重要，设置阴影在border内还是外*/
+
+        /* 点的设置*/
+        .dot{
+            display:block;/* 行内元素变为块级元素，以下属性设置才会表现*/
+            width:13px;
+            height:13px;
+            background:black;
+            border-radius:50%;
+        }
+
+        /*一点的布局，在点一这个元素的父类中定义flex*/
+        .dice-1{
+            
+            justify-content:center;
+            align-items:center;
+        } 
+        .dice-1 span{
+            background:red;
+        }
+
+        /*二点的布局，在他的父类设置flex*/
+        .dice-2{
+            justify-content:space-around;
+            align-items:center;
+
+        }
+
+        /*三点的布局，同上设置flex*/
+        .dice-3{
+            justify-content:space-between;
+        }
+              /*在进行子元素内的设置*/
+        .dice-3 span:nth-of-type(2){
+            align-self:center;
+        }
+        .dice-3 span:nth-of-type(3){
+            align-self:flex-end;
+        }
+
+        /*四点的布局，父类的flex*/
+        .dice-4{
+          flex-direction:column;/*进行主轴重置，这样可以简化其子元素的布局*/
+           /* flex-wrap:wrap;*/
+            justify-content:space-around;
+        }
+
+        .dice-4 div:nth-of-type(1){
+            display:flex;
+            
+            justify-content:space-around;
+        }
+
+        .dice-4 div:nth-of-type(2){
+            display:flex;
+            justify-content:space-around;
+         /*   justify-content:center;*/
+        }
+
+        /*五点*/
+        .dice-5{
+            flex-direction:column;
+            justify-content:space-around;
+        }
+        .dice-5 div:nth-of-type(1){
+            display:flex;
+            justify-content:space-around;
+        }
+        .dice-5 div:nth-of-type(2){
+            display:flex;
+            justify-content:center;
+        }
+        .dice-5 div:nth-of-type(3){
+            display:flex;
+            justify-content:space-around;
+        }
+
+        /*六点*/
+        .dice-6{
+            flex-direction:column;
+            justify-content:space-around;
+        }
+        .dice-6 div:nth-of-type(1){
+            display:flex;
+            justify-content:space-around;
+            
+        }
+        .dice-6 div:nth-of-type(2){
+            display:flex;
+            justify-content:space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dice-1">
+        <span class="dot"></span>
+    </div>
+
+    <div class="dice-2">
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="dice-3">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="dice-4">
+        <div class="group">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        </div>
+        <div class="group">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="dice-5">
+        <div class="group">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="group">
+            <span class="dot"></span>
+        </div>
+        <div class="group">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="dice-6">
+        <div class="group">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="group">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</body>
+</html>

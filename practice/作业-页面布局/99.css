@@ -1,0 +1,101 @@
+
+*{
+    padding: 0;
+    margin: 0;
+ }
+ body{
+    background: url(images/bg.jpg) repeat ;
+   
+ }
+ #header{
+     background: url(images/header.jpg) no-repeat center ;
+     height:1163px;
+ }
+ #header>.banner{
+    width:1000px;
+    margin: 0 auto;
+    position:relative;
+}
+
+
+#header .banner-moon{
+    position:absolute;
+    left:20px;
+    /*opacity:0;*/
+    /*animation:moon 1s linear;*/
+ }
+ #header .banner-word{
+    position:absolute;
+    left:243px;
+    top:50px;
+   /* opacity:0;/*设置初始状态为看不见*/
+}
+#header .banner-company{
+    position:absolute;
+    top:450px;
+    left:262px;
+   /* opacity:0;*/
+}
+
+/*设置不同的效果时间，同时将结束时刻设为最终状态*/
+.animated-duration-1s{
+    animation-duration:1s;
+    animation-fill-mode:both;
+}
+.animated-duration-2s{
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+}
+.animation-duration-3s{
+    animation-duration:4s;
+    animation-fill-mode:forwards;
+}
+
+/*设置不同的延迟时间*/
+.animated.delay-1s{
+    animation-delay:1s;
+}
+.aniamted.delay-2s{
+    animation-delay:2s;
+}
+.animated.delay-3s{
+    animation-delay:3s; 
+}
+.animated.delay-4s{
+    animation-delay:4s;
+}
+
+/*设置浅出动画具体效果*/
+.fadeIn{
+    animation-name:fadeIn;
+}
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+/*设置变大动画效果*/
+.zoomIn{
+    animation-name:zoomIn;
+}
+@keyframes zoomIn{
+    0%{
+        transform:scale(0.3,0.3);
+    }
+    100%{
+        transform:scale(1,1);
+    }
+}
+
+#main{
+    background: url(images/mainbg.png)  no-repeat center 455px;
+    height:4599px;
+   }
+#footer{
+    background: url(images/foot.png)  no-repeat center;
+    height:305px;
+}
