@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        /*  不使用style进行样式的设置，而是直接用script寻找标签并赋值给var类型的变量
+            之后在script中对按钮标签进行事件设置并将函数赋值给设置好的事件，对函数进行设置
+              使事件触发时有反应
+              在函数中需要对标签进行内联模式下的属性设置*/
+    </style>
+<body id="body">
+    <button id="btn">开灯/关灯</button>
+    <p> 好玩不</p>
+
+    <script>
+        var body=document.getElementById('body');
+        var btn=document.getElementById('btn');
+        btn.onclick=function(){
+            if(body.style.background==''||body.style.background=='white'){
+                body.style.background='black';
+                body.style.color='white';
+            }
+            else{
+                body.style.background='white';
+                body.style.color='black';
+            }
+        }
+    </script>
+</body>
+</html>

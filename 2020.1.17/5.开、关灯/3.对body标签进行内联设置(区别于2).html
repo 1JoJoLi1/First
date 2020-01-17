@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body" style="background:black;color:white;">  
+    <button id="btn">开灯/关灯</button>
+    <p> 好玩不</p>
+
+    <script>
+        var body=document.getElementById('body');
+        var btn=document.getElementById('btn');
+        btn.onclick=function(){
+            if(body.style.background=='black'){
+                body.style.background='white';
+                body.style.color='black';
+            }
+            else{
+                body.style.background='black';
+                body.style.color='white';
+            }
+        }
+    </script>
+</body>
+</html>

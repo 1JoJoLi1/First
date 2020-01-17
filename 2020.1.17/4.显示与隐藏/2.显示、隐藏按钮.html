@@ -16,14 +16,19 @@
 
 <body>
     <!--按钮标签，会出现一个按钮-->
-    <button id="btn"> 显示</button>
-    <div id="box"></div>
+    <button id="btn" > 显示</button>
+    <div id="box" style="display: block;"></div>
     <script>
         var btn=document.getElementById('btn');
         var box=document.getElementById('box');
 
         btn.onclick=function(){
-            box.style.display='block';
+            if(box.style.display=='block'){
+                box.style.display='none';
+            }
+            else{
+                box.style.display='block';
+            }
         }
     </script>
 </body>

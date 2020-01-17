@@ -4,17 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <!--2.样式的设置-->
         <style>
             label{
                 cursor: pointer;
-            }
+            }/*为用户提供点击提示（小手）*/
 
             .tips{
-                display: none;
+                display: none;/*初始状态，小提示看不见*/
                 width: 180px;
                 background-color: #fffde4;
-                border: 1px solid #dfb86d;
-                text-align: left;
+                border: 1px solid #dfb86d;/*三个属性 粗细，类型，颜色*/
+                text-align: left; /*文本对齐方式*/
                 padding: 5px 10px;
                 line-height: 18px;
                 color: #dc9632;
@@ -25,11 +26,29 @@
         </style>
     </head>
     <body>
-        <label for="remeber" onmouseover="document.getElementById('itp-1').style.display='block'" onmouseout="document.getElementById('itp-1').style.display='none'">
+        <!--1.标签设置-->
+
+        <!--                label    与   input-->
+        <!--为了使input的内容同时具有点击效果，将下列两值相同（id与for）-->
+        <label for="remeber" id="label" >
             <input id="remeber" type="checkbox"> 记住账号
         </label>
-        <div class="tips" id="itp-1">
+
+        <div class="tips" id="itp1">
             为了您的信息安全，请不要在网吧或公用电脑上使用此功能！
         </div>
+ 
+        <!--3.script设置-->
+        <script>
+            var label=document.getElementById('label');/*该赋值过程括号应加引号*/
+            var itp1=document.getElementById('itp1');/*同上*/
+            label.onmouseover = function(){ /*给label设置onmouseover（鼠标覆盖label时）事件,
+                                               同时将函数赋值给这个事件，这样就能自定义在事件触发时具体要发生什么*/
+                itp1.style.display='block';
+            }
+            label.onmouseout = function(){
+                itp1.style.display='none';
+            }
+        </script>
     </body>
 </html>

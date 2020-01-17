@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+       body{
+           background:black;
+           color:white;
+       }
+    </style>
+<body id="body">  <!--对body进行内部模式设置，这样不会产生标签内的属性（body的初始内联属性style。background属性为空），所以在if判断中还需要判断空状态-->
+    <button id="btn">开灯/关灯</button>
+    <p> 好玩不</p>
+
+    <script>
+        var body=document.getElementById('body');
+        var btn=document.getElementById('btn');
+        btn.onclick=function(){
+            if(body.style.background==''||body.style.background=='black'){
+                body.style.background='white';
+                body.style.color='black';
+            }
+            else{
+                body.style.background='black';
+                body.style.color='white';
+            }
+        }
+    </script>
+</body>
+</html>
