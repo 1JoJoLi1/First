@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button按钮标签  var变量  赋值为=  function后加（） </title>
+    <style>
+        div{
+            width:50px;
+            height:50px;
+            background:green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--按钮标签，会出现一个按钮-->
+    <button id="show"> 显示</button>
+    <button id="hide"> 隐藏</button>
+    <div id="box"></div>
+    <script>
+        var show=document.getElementById('show');
+        var hide=document.getElementById('hide');
+        var box=document.getElementById('box');
+
+        show.onclick=function(){
+            box.style.display='block';
+        }
+        hide.onclick=function(){
+            box.style.display='none';
+        }
+    </script>
+</body>
+</html>

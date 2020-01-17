@@ -70,52 +70,38 @@
         .dice-4{
           flex-direction:column;/*进行主轴重置，这样可以简化其子元素的布局*/
            /* flex-wrap:wrap;*/
-            justify-content:space-around;
+            justify-content:space-between;
         }
 
-        .dice-4 div:nth-of-type(1){
+        .dice-4 div:nth-of-type(1),.dice-4 div:nth-of-type(2){
             display:flex;
             
-            justify-content:space-around;
-        }
-
-        .dice-4 div:nth-of-type(2){
-            display:flex;
-            justify-content:space-around;
-         /*   justify-content:center;*/
+            justify-content:space-between;
         }
 
         /*五点*/
         .dice-5{
             flex-direction:column;
-            justify-content:space-around;
+            justify-content:space-between;
         }
-        .dice-5 div:nth-of-type(1){
+        .dice-5 div:nth-of-type(1),.dice-5 div:nth-of-type(3){
             display:flex;
-            justify-content:space-around;
+            justify-content:space-between;
         }
         .dice-5 div:nth-of-type(2){
             display:flex;
             justify-content:center;
         }
-        .dice-5 div:nth-of-type(3){
-            display:flex;
-            justify-content:space-around;
-        }
+       
 
         /*六点*/
         .dice-6{
             flex-direction:column;
-            justify-content:space-around;
+            justify-content:space-between;
         }
-        .dice-6 div:nth-of-type(1){
+        .dice-6 div:nth-of-type(1),.dice-6 div:nth-of-type(2){
             display:flex;
-            justify-content:space-around;
-            
-        }
-        .dice-6 div:nth-of-type(2){
-            display:flex;
-            justify-content:space-around;
+            justify-content:space-between;
         }
     </style>
 </head>

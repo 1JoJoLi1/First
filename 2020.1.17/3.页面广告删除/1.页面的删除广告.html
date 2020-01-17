@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对于广告框架的建立（div），属性的设置</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .all{
+            position:absolute;
+            top:0;
+            right:0;
+        }
+        .all img{
+            width:110px;
+            height:110px;
+            transition:all 0.5s;
+            position:absolute;
+            top:0;
+            right:0;
+        }
+        .all img:hover{
+            width:150px;
+            height:150px;
+        }
+        .all .delete{
+            cursor:pointer;
+            display:block;
+            position:absolute;
+            top:0;
+            right:0;
+            width:20px;
+            height:20px;
+            background:url(./images/hao123.png) -470px -208px ;
+            transform:rotate(180deg);
+            margin:2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all" id="all">
+
+        <div class="main">
+            <a href="https://www.baidu.com/">
+                <img src="./images/dati.png">
+            </a>
+        </div>
+
+        <span class="delete" id="del"> </span>
+    </div>
+</body>
+</html>
