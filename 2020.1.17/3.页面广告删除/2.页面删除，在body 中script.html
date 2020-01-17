@@ -42,7 +42,7 @@
     </style>
 </head>
 <body>
-    <div class="all" id="all">
+    <div class="all" id="all" >
 
         <div class="main">
             <a href="https://www.baidu.com/">
@@ -50,7 +50,7 @@
             </a>
         </div>
 
-        <span class="delete" id="del"> </span>
+        <span class="delete" id="del" onclick="gg()"> </span>
     </div>
 
 
@@ -60,9 +60,8 @@
          事件中给delall的style。display赋值none
          -->
     <script>
-        var del=document.getElementById('del');
         var delall=document.getElementById('all');
-        del.onclick=function(){
+        function gg(){
             delall.style.display='none';
         }
     </script>
