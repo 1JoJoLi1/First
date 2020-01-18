@@ -50,7 +50,7 @@
             </a>
         </div>
 
-        <span class="delete" id="del" onclick="gg()"> </span>
+        <span class="delete" id="del" onclick="del()"> </span>
     </div>
 
 
@@ -60,9 +60,8 @@
          事件中给delall的style。display赋值none
          -->
     <script>
-        var delall=document.getElementById('all');
-        function gg(){
-            delall.style.display='none';
+        function del(){
+            document.getElementById('all').style.display='none';
         }
     </script>
 </body>

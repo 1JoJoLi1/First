@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:50px;
+            height:50px;
+            background:green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--按钮标签，会出现一个按钮-->
+    <button  onclick="showorhide()"> 显示</button>
+    <div id="box" style="display: block;"></div>
+    <script>
+       
+        var box=document.getElementById('box');
+
+        function showorhide(){
+            if(box.style.display=='block'){
+                box.style.display='none';
+            }
+            else{
+                box.style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>
