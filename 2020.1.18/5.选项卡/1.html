@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+        }
+        .card{
+            margin-left:300px;
+        }
+        .card ul{
+            list-style:none;
+        }
+        .card li{
+            float:left;
+            width:100px;
+            height:50px;
+            border:1px solid black;
+            text-align:center;
+            line-height:50px;
+      }  
+        .card div{
+            display:none;
+            clear:both;
+            width:300px;
+            height:400px;
+            border:1px solid black;
+      }
+      .card ul li.chosetitle{
+          background:pink;
+          color:white;
+      }
+      .card div.chosecontent{
+          display:block;
+      }
+    </style>
+</head>
+<body>
+    <div class="card" id="card">
+    <ul>
+        <li>选项一</li>
+        <li>选项二</li>
+        <li>选项三</li>
+    </ul>
+    <div class="chosecontent">梗概</div>
+    <div>内容一</div>
+    <div>内容二</div>
+    <div>内容三</div>
+    </div>
+    <script>
+        var card=document.getElementById('card');
+        var li = card.getElementsByTagName('li');
+        var div=card.getElementsByTagName('div');
+
+        for(var i=0;i<li.length;i++){
+            li[i].hhh=i;
+
+            li[i].onclick=function(){
+            /*在这个function中，外层的i在这里失效，而可用this表示这个函数所赋值的事件的对象本身*/
+                for(var j=0;j<li.length;j++){
+                    li[j].className="";
+                }
+                for(var k=0;k<div.length;k++){
+                    div[k].className="";
+                }
+
+                
+                div[this.hhh+1].className="chosecontent";
+                this.className="chosetitle";
+            }
+        }
+    </script>
+    
+</body>
+</html>

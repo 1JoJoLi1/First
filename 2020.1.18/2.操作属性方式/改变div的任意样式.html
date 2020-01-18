@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .div{
+            float:left;
+            width:100px;
+            height:50px;
+            border:1px solid black;
+            text-align:center;
+            line-height:50px;
+
+           /* line-height:50px;
+            border:1px solid red;
+            padding:30px;
+            text-align: center;
+            width:200px;
+            height:200px;
+            background:green;
+            color:black;*/
+        }
+    </style>
+</head>
+<body>
+    <button onclick="change('height','500px')">长度变为500px</button>
+    <button onclick="change('width','500px')">宽变为500px</button>
+    <button onclick="change('background','red')">背景颜色变为红色</button>
+    <button onclick="change('color','pink')">字体颜色变为粉色</button>
+    <div id="div" class="div"> emmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+         </div>
+
+    <script>
+        var div=document.getElementById('div');
+
+        function change(name,value){
+            div.style[name]=value;/*操作属性的方式有两种（暂时学到），1--.   2--【】 
+                                     []是在将属性变为变量时使用 */
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="choseall()"> 全选</button>
+    <button onclick="choseallno()"> 不选</button>
+    <button onclick="choseback()"> 反选</button>
+    <div id="div">
+        <input type="checkbox"> <br>  
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> <br> 
+        <input type="checkbox"> 
+    </div>
+    <hr>
+    <input type="checkbox">
+
+    <script>
+        var out = document.getElementById('div');
+        var div=out.getElementsByTagName('input');
+
+        function choseall(){
+                for(var i=0;i<div.length;i++){
+                    div[i].checked=true;
+                }
+        }
+        function choseallno(){
+                for(var i=0;i<div.length;i++){
+                    div[i].checked=false;
+                }
+        }
+        function choseback(){
+                for(var i=0;i<div.length;i++){
+                    if(div[i].checked==true){
+                    div[i].checked=false;
+                    }
+                    else{
+                    div[i].checked=true;
+                    }
+                }
+        }
+    </script>
+    
+</body>
+</html>

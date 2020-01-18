@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1. do while 循环*/
+        var i=1;
+        var sum=0;
+        var sum1=0;
+        var summ;
+        do{
+            sum+=i;
+            i++;
+        }while(i<=6)
+        var i=1;
+        do{
+            i++;
+            sum1+=i;
+        }while(i<=6)
+        summ=sum1-sum;
+        alert(sum);
+        alert(sum1);
+        alert('sum=+1;i++;顺序颠倒后，差值为：'+summ);
+
+
+        /*2.for循环*/
+        var i=1;
+        var sum=0;
+        for(var i=1;i<=4;i++){
+            sum+=i;
+        }
+
+        /*3.while循环*/
+        var i=1;
+        var sum=0;
+        while(i<=4){
+            sum=sum+i;
+            i=i+1;
+        }
+    </script>
+</body>
+</html>
