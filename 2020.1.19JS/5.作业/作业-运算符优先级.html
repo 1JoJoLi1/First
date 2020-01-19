@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 运行以下代码，得到运行结果，并给出解释
+
+        var a = 1 && 2 && 3;
+        var b = 0 && 1 && 2;
+        var c = 1 && 0 && 2;
+        console.log(a, b, c); 
+
+
+        var d = 0 || 1 || 2;
+        var e = 1 || 0 || 2;
+        var f = 1 || 2 || 0;
+        console.log(d, e, f); 
+
+        var g =  1 && 2 || 3;
+        var h =  1 || 2 && 3;
+        var i =  0 || 2 && 3;
+        console.log(g, h, i); 
+
+        var x = 3;  
+        var y = 5;  
+        if (x = 5 || y == 0) 
+        {  
+            x++;   
+            y++;
+        }
+        console.log(x, y); 
+
+        var x = 3;  
+        var y = 5;  
+        if(x = 5 && y == 0) 
+        {  
+            x++;  
+            y++;
+        }
+        console.log(x, y);
+
+        var x = 3;  
+        var y = 5;  
+        if(x = 5 && y == 5) 
+        {  
+            x++;  
+            y++;
+        }
+        console.log(x, y);
+    </script>
+</body>
+</html>

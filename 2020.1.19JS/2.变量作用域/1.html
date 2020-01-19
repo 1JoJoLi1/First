@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d=0;// 全局变量
+        function a(){    //在局部可以使用全局变量
+            d=5;         //不是局部变量，因为没有声明    这是对全局变量d的再赋值
+            alert(d);
+        }
+
+
+
+        function w(){    //在这个函数之外，这个函数内定义的d无法使用
+            var d=10;    //这是局部变量，因为有新的声明，
+            alert(d);    //局部的d
+        }
+    </script>
+
+</body>
+</html>

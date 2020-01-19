@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function a(){
+            var sum=0;
+            for(var i=0;i<10;i++){
+                if(i==5){
+                    continue;//跳出本次循环（跳过第6次循环）
+                }
+                sum+=i;
+            }
+            console.log(sum);
+        }
+
+
+        function b(){
+            var sum=0;
+            
+            for(var i=0;i<10;i++){
+                if(i==4){
+                    break;//终止循环
+                }
+                sum+=i;
+            }
+            console.log(sum);
+        }
+
+
+        //运行函数a，b
+        a();
+        b();
+    </script>
+
+
+</body>
+</html>

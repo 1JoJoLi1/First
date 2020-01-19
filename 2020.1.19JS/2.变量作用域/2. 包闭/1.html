@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* 在众多代码合并时，全局变量虽然简单，但是会产生很大的麻烦
+           存在全局变量重复，修改太难
+           所以尽量不要用全局变量*/
+
+           var a;
+           function e(){
+                a=10;
+           }
+           function f(){
+               alert(a);
+           }
+           e();
+           f();
+
+
+
+           /*包闭，取消全局变量*/
+           function h(){
+               var b=50;
+               function l(){
+                    alert(b);
+               }
+           }
+    </script>
+</body>
+</html>

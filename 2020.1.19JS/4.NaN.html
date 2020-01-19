@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(1 + parseFloat('abc'));  // NaN
+        console.log(1 + parseFloat('1a1abc')); // 2
+        console.log(1 + parseFloat('abc1')); // NaN
+        console.log(1 + parseFloat('a1bc')); // NaN
+        //忽略字符串前空格，直到找到第一个非空字符，将找到数字后面非数字的字符串移除
+        //如果第一个字符不是数字符号或者负号，返回NaN（向下取整，会将小数取整）
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="第一个数" id="numone">
+        <input type="text" placeholder="运算符（+，-，*，/）" id="OR">
+        <input type="text" placeholder="第二个数" id="numtwo">
+        =
+        <input type="text" disabled id="result">
+    </form>
+    <button type="button"  onclick="btn()"> 运算</button>
+    <script>
+        var numone=document.getElementById('numone');
+        var or=document.getElementById('OR');
+        var numtwo=document.getElementById('numtwo');
+        var result=document.getElementById('result');
+       
+        
+        function btn(){
+            if(isNaN(numone.value)||isNaN(numtwo.value)){
+                alert('运算数出现错误输入');
+                return;
+            }
+            var one=parseFloat(numone.value);
+            var two=parseFloat(numtwo.value);
+            var OR=String(or.value);
+           
+            switch(OR){
+                case '+': result.value=one+two;
+                        break;
+                case '-':result.value=one-two;
+                        break;
+                case '*':result.value=one*two;
+                        break;
+                case '/':result.value=one/two;
+                        break;
+                default:
+                        alert('请输入正确的运算符');
+            }
+        }
+
+    </script>
+</body>
+</html>
